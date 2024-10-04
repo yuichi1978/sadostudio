@@ -1,0 +1,132 @@
+@charset "utf-8";
+@use "setting" as *;
+@use "lower" as *;
+@use "common" as *;
+@include common;
+@include lower;
+
+/*                共通
+======================================================= */
+body{
+  background-repeat: no-repeat;
+}
+/*                content
+======================================================= */
+.p-member{
+  margin-top: 121px;
+  @media only screen and (max-width: 1023px) {
+    margin-top: 60px;
+  }
+  @media only screen and (max-width: 767px) {
+    margin-top: 44px;
+  }
+}
+.p-member__detail{
+  margin-top: 100px;
+  padding-bottom: 200px;
+  @media only screen and (max-width: 767px) {
+    margin-top: 57px;
+    padding-bottom: 100px;
+  }
+  @media only screen and (max-width: 480px) {
+    margin-top: 45px;
+  }
+}
+.p-member__block{
+  & + .p-member__block{
+    margin-top: 116px;
+    @media only screen and (max-width: 767px) {
+      margin-top: 79px;
+    }
+  }
+  &:nth-child(3){
+    margin-top: 108px;
+    @media only screen and (max-width: 767px) {
+      margin-top: 80px;
+    }
+  }
+}
+.p-member__block__inr{
+  display: flex;
+  gap: 100px;
+  @media only screen and (max-width: 1023px){
+    gap: 50px;
+  }
+  @media only screen and (max-width: 767px){
+    flex-direction: column;
+    gap: 0;
+  }
+}
+.p-member__photo{
+  width: 250px;
+  margin-left: 50px;
+  @media only screen and (max-width: 1023px){
+    width: 200px;
+    margin-left: 30px;
+  }
+  @media only screen and (max-width: 767px){
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.p-member__word{
+  flex: 1;
+  @media only screen and (max-width: 767px) {
+    margin-top: 14px;
+  }
+}
+.p-member__position{
+  color: $gray;
+  font-size: 16px;
+  font-family: $fontCormorantGaramond;
+  line-height: 1;
+  @media only screen and (max-width: 480px) {
+    padding-top: 9px;
+    display: block;
+  }
+}
+.p-member__title{
+  font-size: 30px;
+  @media only screen and (max-width: 767px) {
+    font-size: 23px;
+  }
+}
+.p-member__read{
+  line-height: 2.44;
+  margin-top: 10px;
+}
+.p-member__list{
+  margin-top: 56px;
+  @media only screen and (max-width: 480px){
+    margin-top: 20px;
+  }
+}
+.p-member__ul{
+  display: flex;
+  gap: 40px;
+  @media only screen and (max-width: 1023px){
+    gap: 20px;
+  }
+  @media only screen and (max-width: 480px){
+    gap: 10px 0;
+    flex-direction: column;
+  }
+}
+.p-member__li{
+
+}
+.p-hd__logo-img{
+  @media only screen and (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+.p__human_img{
+  width: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  @media only screen and (max-width: 480px) {
+    width: 178px;
+    height: auto;
+  }
+}
