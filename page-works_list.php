@@ -324,7 +324,7 @@ if (is_date()) {
           });
 
           // URLパラメーター付きのページへ遷移
-          location.href = "/works_list/?area=" + area + "&year=" + year + "&structure=" + structure + "&scale=" + scale;
+          location.href = "../works_list/?area=" + area + "&year=" + year + "&structure=" + structure + "&scale=" + scale;
         }
 
         // PC用検索
