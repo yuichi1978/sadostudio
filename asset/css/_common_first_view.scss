@@ -1,0 +1,184 @@
+@charset "utf-8";
+@use "setting" as *;
+////////////////////////////////////////////////////////////
+///     　　　　　全ページ共通の　first_view   　　　　　////
+////////////////////////////////////////////////////////////
+@mixin common_first_view {
+  /*                leyout
+======================================================= */
+  body {
+  }
+  .l-root-wrapper {
+    overflow: hidden;
+    padding-top: 80px;
+    @media only screen and (max-width: 767px) {
+      padding-top: 60px;
+    }
+  }
+  /*                header
+======================================================= */
+  .l-hd {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 11;
+    background-color: #fff;
+    transition: background-color 0.5s;
+  }
+  .l-hd__inr {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px 0 70px;
+    width: 100%;
+    height: 80px;
+    z-index: 1;
+    @media only screen and (max-width: 1023px) {
+      padding: 0 35px;
+    }
+    @media only screen and (max-width: 767px) {
+      padding: 5px 0 0 15px;
+      height: 80px;
+    }
+  }
+  .p-hd__logo {
+  }
+  .p-hd__logo-inr {
+    width: 130px;
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .p-hd__logo-img {
+    width: 100%;
+    display: block;
+  }
+  .p-hd__nav {
+    position: relative;
+    height: 100%;
+    @media only screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+  .p-hd__main {
+    display: flex;
+    height: 100%;
+    margin: 0;
+    gap: 38px;
+    @media only screen and (max-width: 1023px) {
+      gap: 18px;
+    }
+  }
+  .p-hd__item {
+    font-size: 16px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-family: $fontCormorantGaramond;
+    font-weight: 500;
+    @media only screen and (max-width: 1023px) {
+      margin: 0 15px;
+    }
+    @media only screen and (max-width: 767px) {
+      margin: 0 0.5em;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &.menu-item {
+      &::before {
+        content: none;
+      }
+    }
+    &:nth-child(n + 2) {
+      margin-top: 0;
+    }
+  }
+  .p-hd__link {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $black;
+    &.-link {
+      @media only screen and (min-width: 768px) {
+        &:hover {
+          opacity: 0.6;
+          .-child {
+          }
+        }
+      }
+      &:visited {
+      }
+    }
+  }
+  .l-hd__spmenu {
+    position: absolute;
+    &-icon {
+      //l-hd__spmenu-icon
+      width: 20px;
+    }
+    &-btn {
+      //l-hd__spmenu-btn
+      position: fixed;
+      width: 50px;
+      height: 50px;
+      right: 15px;
+      top: 15px;
+      z-index: 12;
+      display: block;
+      border: 2px solid $black;
+      border-radius: 7px;
+      &.left {
+        right: 72px;
+        background-color: $black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+          display: flex;
+        }
+      }
+    }
+    &-border {
+      //l-hd__spmenu-border
+      position: absolute;
+      display: block;
+      width: 26px;
+      height: 2px;
+      left: 10px;
+      transition: all 0.5s;
+      background-color: $black;
+      &.-border01 {
+        top: 13px;
+      }
+      &.-border02 {
+        top: 21px;
+      }
+    }
+    &-txt {
+      //l-hd__spmenu-txt
+      font-family: "Trebuchet MS", sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      position: absolute;
+      top: 27px;
+      letter-spacing: 0;
+      left: 10px;
+    }
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotateZ(0);
+    }
+
+    100% {
+      transform: rotateZ(360deg);
+    }
+  }
+}

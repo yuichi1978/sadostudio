@@ -1,0 +1,112 @@
+@charset "utf-8";
+@use "setting" as *;
+@use "lower" as *;
+@use "common" as *;
+@include common;
+@include lower;
+
+/*                共通
+======================================================= */
+body{
+  background-repeat: no-repeat;
+}
+/*                content
+======================================================= */
+.l-title__head{
+  
+}
+.p-contact{
+  margin-top: 121px;
+  @media only screen and (max-width: 1023px) {
+    margin-top: 60px;
+  }
+  @media only screen and (max-width: 767px) {
+    margin-top: 44px;
+  }
+}
+.c-form__item{
+  & + .c-form__item{
+    margin-top: 37px;
+    @media only screen and (max-width: 767px) {
+      margin-top: 33px;
+    }
+  }
+}
+.c-form__head{
+  font-size: 14px;
+}
+.c-form__content{
+  margin-top: 11px;
+  @media only screen and (max-width: 767px) {
+    margin-top: 6px;
+  }
+  textarea{
+    resize: vertical;
+    height: 168px;
+    vertical-align: bottom;
+    width: 100%;
+    font-family: $fontYuMin;
+    width: 100%;
+    padding: 18px 20px;
+    border: 1px solid $borderColor;
+    border-radius: 8px;
+    @media only screen and (max-width: 767px) {
+      padding: 12px 18px;
+      height: 170px;
+      letter-spacing: 1px;
+    }
+  }
+  input{
+    opacity: 0.8;
+    width: 100%;
+    padding: 20px 20px;
+    border: 1px solid $borderColor;
+    border-radius: 8px;
+    font-family: $fontYuMin;
+    @media only screen and (max-width: 767px) {
+      padding: 11px 18px;
+      letter-spacing: 1px;
+    }
+  }
+  ::placeholder{
+    color: $gray;
+  }
+}
+.c-form__attention{
+  text-align: right;
+  padding-top: 26px;
+  @media only screen and (max-width: 767px) {
+    padding-top: 18px;
+  }
+}
+.c-form__attention-text{
+  font-size: 14px;
+}
+.p-send__btn{
+  display: flex;
+  justify-content: center;
+  margin-top: 114px;
+  @media only screen and (max-width: 767px) {
+    margin-top: 50px;
+  }
+}
+.wpcf7-form-control-wrap{
+  display: block;
+}
+.c-form{
+  padding-bottom: 168px;
+  @media only screen and (max-width: 767px) {
+    padding-bottom: 68px;
+  }
+}
+.l-title__head{
+  margin-bottom: 106px;
+  @media only screen and (max-width: 767px) {
+    margin-bottom: 40px;
+  }
+}
+.p-contact__required{
+  font-size: 16px;
+  line-height: 1;
+  color: $gray;
+}

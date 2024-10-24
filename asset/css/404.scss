@@ -1,0 +1,26 @@
+@charset "utf-8";
+@use "setting" as *;
+@use "lower" as *;
+@use "common" as *;
+@include common;
+@include lower;
+/*                共通
+======================================================= */
+
+
+.l-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 118px - 316px);
+  padding: 0 50px;
+  @media only screen and (max-width: 767px) {
+    padding: 0 20px;
+  }
+}
+.not-found {
+  &-ttl {
+    font-weight: bold;
+    text-align: center;
+  }
+}

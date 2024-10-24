@@ -1,0 +1,79 @@
+h2 {
+  color: #b60300;
+  font-size: 142.9%;
+  font-weight: bold;
+}
+h2 strong {
+}
+h3 {
+  font-size: 142.9%;
+  font-weight: normal;
+}
+h4 {
+  font-size: 128.6%;
+  font-weight: normal;
+}
+h5 {
+  font-size: 114.3%;
+  font-weight: normal;
+}
+h6 {
+  font-size: 100%;
+  font-weight: bold;
+}
+a {
+}
+a.entryCont {
+}
+p + h3,
+p + h4,
+p + h5,
+p + h6 {
+}
+table {
+}
+table tr th,
+table tr td {
+}
+table + p {
+}
+ol {
+  list-style: none;
+  padding-left: 0;
+}
+ol li {
+  position: relative;
+  padding-left: 1.5em;
+  text-indent: -1.5em;
+  margin-bottom: 0.5em;
+}
+ol li + li {
+}
+ul{
+  list-style: none;
+  padding-left: 0;
+}
+ul li {
+  position: relative;
+  padding-left: 1.1em;
+  margin-bottom: 0.5em;
+}
+ul li:before {
+  position: absolute;
+  display: block;
+  width: 5px;
+  height: 5px;
+  content: "";
+  background: #333333;
+  left: 0.2em;
+  top: 50%;
+  margin-top: -3px;
+}
+ul li + li {
+}
+.aligncenter {
+}
+.alignleft {
+}
+.alignright {
+}

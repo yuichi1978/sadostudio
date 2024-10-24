@@ -1,0 +1,217 @@
+@charset "utf-8";
+@use "sass:math";
+
+/////////////////////////各種ファイル読み込み/////////////////////////
+//@import "common", "lower", "common_first_view";
+/////////////////////////案件ごとセッティング/////////////////////////
+//ベースフォントサイズ
+//カラー設定
+$siteColor: #000000;
+$black: #585A55;
+$green: #A3B195;
+$white: #fff;
+$baseColor: #f5f5f5;
+$borderColor: #E7EAE1;
+$gray: #BBBFBA;
+$worksborderColor:#E8EAE2;
+
+//リセット
+
+/*@mixin rem($fontsize) {
+  font-size: $fontsize + px;
+  //font-size: ($size / 10) + rem;
+  font-size: math.div($fontsize, 10) + rem;
+}*/
+
+@mixin reset {
+  html {
+  }
+  body {
+    color: $black;
+    background: #fff;
+    font-family: $fontYuMin;
+    -webkit-text-size-adjust: none;
+  }
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  table,
+  th,
+  td,
+  ul,
+  li,
+  ol,
+  dl,
+  dt,
+  dd,
+  form,
+  p {
+    margin: 0px;
+    padding: 0px;
+    font-weight: 400;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+    list-style-type: none;
+    font-size: 14px;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+  }
+  a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    img {
+      border-top-style: none;
+      border-right-style: none;
+      border-bottom-style: none;
+      border-left-style: none;
+      //@include animate;
+    }
+  }
+  img {
+    vertical-align: bottom;
+    max-width: 100%;
+    height: auto;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  input,
+  textArea,
+  select,
+  button {
+    background: none;
+    margin: 0px;
+    outline: none;
+    padding: 0px;
+    font-weight: normal;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+    list-style-type: none;
+    -webkit-appearance: none; //iOS系のデフォルト設定を外す
+  }
+  select {
+    -webkit-appearance: button;
+    appearance: button;
+  }
+  button {
+    cursor: pointer;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  /*                link
+  ======================================================= */
+  a {
+    letter-spacing: 0.06em;
+    color: $baseColor;
+    text-decoration: none;
+    @include animate;
+  }
+}
+/////////////////////////mixin設定/////////////////////////
+///
+// awoseome @include fontIcon
+@mixin fontIcon {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+}
+//オリジナルアイコン @include iconMoon
+@mixin iconMoon {
+  font-family: "icomoon";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@mixin animate {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
+}
+
+//ボックス中央寄せ　@include boxC
+@mixin boxC {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@mixin fa {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  //font-family: FontAwesome,$fontMeiryo;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/////////////////////////変数/////////////////////////
+//フォント変数
+$fontMeiryo: "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", Arial,
+  sans-serif;
+$fontHira: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo,
+  Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+$fontMintyo: "ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3",
+  "Hiragino Mincho Pro", serif;
+$fontGothic: "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+$fontRaleway: "Raleway", "MS PGothic", sans-serif;
+$fontNoto: "Noto Sans Japanese", serif;
+$fontLato: "Lato", "arial", sans-serif;
+$fontOpenSans: "Open Sans", Arial, sans-serif;
+$fontYuMin: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro",
+  "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+$fontYuGothic: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+  sans-serif;
+$fontCormorantGaramond: "CormorantGaramond", serif;
+@font-face {
+  font-family: "CormorantGaramond";
+  font-style: "normal";
+  font-weight: 400;
+  font-display: swap;//読み込み中のテキスト表示
+  src: 
+  url('../fonts/CormorantGaramond-Regular.otf') format("opentype"),
+  url('../fonts/CormorantGaramond-Regular.woff') format("woff"),/* Modern Browsers */
+  url('../fonts/CormorantGaramond-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */;
+}
+@font-face {
+  font-family: "CormorantGaramond";
+  font-style: "normal";
+  font-weight: 500;
+  font-display: swap;//読み込み中のテキスト表示
+  src: 
+  url('../fonts/CormorantGaramond-Medium.otf') format("opentype"),
+  url('../fonts/CormorantGaramond-Medium.woff') format("woff"),/* Modern Browsers */
+  url('../fonts/CormorantGaramond-Medium.ttf')  format('truetype'); /* Safari, Android, iOS */;
+}
+
+@mixin mediaYoko {
+  // デバイスが横向きの場合
+  @media (orientation: landscape) {
+    @content;
+  }
+}
+@mixin mediaTate {
+  //デバイスが縦向きの場合
+  @media (orientation: portrait) {
+    @content;
+  }
+}
